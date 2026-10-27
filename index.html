@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday, My Love  ❤️</title>
+
+<style>
+:root {
+  --pink: #ff70ad;
+  --light-pink: #ffc4df;
+  --purple: #1a0b2e;
+  --white: #fff4fb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--white);
+  background:
+    radial-gradient(ellipse at 50% 0%, #47205c 0%, transparent 55%),
+    linear-gradient(145deg, #10071f, #241039 55%, #10071f);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, white 50%, transparent),
+    radial-gradient(2px 2px at 75% 20%, white 50%, transparent),
+    radial-gradient(1px 1px at 45% 65%, white 50%, transparent),
+    radial-gradient(2px 2px at 85% 75%, white 50%, transparent),
+    radial-gradient(1px 1px at 10% 80%, white 50%, transparent);
+  background-size: 180px 180px, 240px 240px,
+                   150px 150px, 220px 220px, 200px 200px;
+  z-index: 0;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 94%);
+  margin: auto;
+  padding: 35px 0 25px;
+}
+
+.hero {
+  text-align: center;
+  padding: 25px 12px 10px;
+}
+
+.eyebrow {
+  color: var(--light-pink);
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 18px 0;
+  color: var(--light-pink);
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  font-weight: normal;
+  line-height: 1.1;
+  text-shadow: 0 0 25px #ff70ad70;
+}
+
+.hero p {
+  max-width: 550px;
+  margin: auto;
+  color: #f0d8f1;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+  gap: 28px;
+  margin-top: 25px;
+}
+
+.cake-panel,
+.letter-panel {
+  border: 1px solid #ff91ca55;
+  border-radius: 24px;
+  background: #10091eaa;
+  box-shadow: 0 15px 50px #00000025;
+  backdrop-filter: blur(10px);
+}
+
+.cake-panel {
+  min-height: 460px;
+  padding: 30px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cake-title {
+  color: var(--light-pink);
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.cake-subtitle {
+  margin-top: 9px;
+  color: #cdb5db;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Birthday cake */
+
+.cake-scene {
+  position: relative;
+  width: 260px;
+  height: 240px;
+  margin: 22px auto 10px;
+}
+
+.cake {
+  position: absolute;
+  width: 190px;
+  height: 112px;
+  left: 35px;
+  bottom: 28px;
+  border-radius: 12px 12px 22px 22px;
+  background: linear-gradient(
+    90deg,
+    #e85b9b,
+    #ffc5df 45%,
+    #ff9fc9 75%,
+    #d94d91
+  );
+  box-shadow:
+    inset 0 -10px 0 #e65a98,
+    0 15px 25px #00000030;
+  z-index: 2;
+}
+
+.cake-top {
+  position: absolute;
+  width: 190px;
+  height: 42px;
+  left: 35px;
+  bottom: 120px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, #fff5fa, #ffb8d9);
+  z-index: 3;
+}
+
+.frosting {
+  position: absolute;
+  top: 17px;
+  left: 8px;
+  right: 8px;
+  height: 25px;
+  border-radius: 50%;
+  border-bottom: 5px dotted #ff76b4;
+}
+
+.drip {
+  position: absolute;
+  top: 23px;
+  width: 15px;
+  height: 22px;
+  border-radius: 0 0 10px 10px;
+  background: #ffe6f2;
+}
+
+.drip.one { left: 30px; height: 30px; }
+.drip.two { left: 77px; height: 20px; }
+.drip.three { left: 125px; height: 29px; }
+.drip.four { left: 158px; height: 18px; }
+
+.cake-decoration {
+  position: absolute;
+  inset: 49px 0 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 22px;
+}
+
+.cake-plate {
+  position: absolute;
+  left: 13px;
+  bottom: 15px;
+  width: 234px;
+  height: 27px;
+  border-radius: 50%;
+  background: linear-gradient(#fff4fa, #e99ac2);
+  box-shadow: 0 0 24px #ff70ad30;
+  z-index: 1;
+}
+
+.candle {
+  position: absolute;
+  left: 124px;
+  bottom: 159px;
+  width: 12px;
+  height: 49px;
+  border-radius: 4px 4px 2px 2px;
+  background: repeating-linear-gradient(
+    135deg,
+    #fff8fb 0px,
+    #fff8fb 7px,
+    #ff70ad 7px,
+    #ff70ad 13px
+  );
+  box-shadow: 0 0 8px #ffb7d7;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.flame {
+  position: absolute;
+  width: 19px;
+  height: 29px;
+  top: -28px;
+  left: -3.5px;
+  border-radius: 55% 45% 50% 50%;
+  background: radial-gradient(
+    ellipse at 50% 70%,
+    #fffbd0 0%,
+    #ffd75d 35%,
+    #ff8c36 65%,
+    #ff477e 90%
+  );
+  box-shadow:
+    0 0 12px #ffca60,
+    0 0 28px #ff8c3666;
+  transform-origin: center bottom;
+  animation: flicker 0.55s infinite alternate;
+  transition: opacity 0.4s;
+}
+
+.flame.out {
+  opacity: 0;
+  animation: none;
+}
+
+.smoke {
+  position: absolute;
+  top: -35px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  opacity: 0;
+  border-radius: 50%;
+  background: #e3d6e9;
+  pointer-events: none;
+}
+
+.smoke.show {
+  animation: smoke 1.5s ease-out forwards;
+}
+
+@keyframes flicker {
+  from { transform: rotate(-6deg) scale(1); }
+  to { transform: rotate(6deg) scale(1.12, 0.92); }
+}
+
+@keyframes smoke {
+  0% { opacity: 0.65; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translate(-9px, -45px) scale(3); }
+}
+
+.cake-instruction {
+  color: #d9b9d9;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+.surprise-button {
+  margin-top: 24px;
+  padding: 15px 24px;
+  border-radius: 40px;
+  background: linear-gradient(110deg, #ff4d98, #ff83bb);
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 0 25px #ff4d9855;
+}
+
+.surprise-button:hover {
+  box-shadow: 0 0 35px #ff4d9880;
+}
+
+/* Love letter */
+
+.letter-panel {
+  padding: 30px;
+}
+
+.letter-heading {
+  color: var(--light-pink);
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 2.3rem;
+  font-weight: normal;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ff70ad66;
+}
+
+.letter-content {
+  color: #f1e3f4;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.letter-content p {
+  margin-bottom: 17px;
+}
+
+.signature {
+  margin-top: 25px;
+  text-align: center;
+  color: var(--light-pink);
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 1.7rem;
+  line-height: 1.6;
+}
+
+.hidden-letter {
+  display: none;
+}
+
+.hidden-letter.visible {
+  display: block;
+  animation: reveal 1s ease both;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  padding: 32px 10px 10px;
+  color: #bfa3cf;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.floating-heart {
+  position: fixed;
+  bottom: -35px;
+  pointer-events: none;
+  z-index: 10;
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    width: 92%;
+    padding-top: 22px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cake-panel {
+    min-height: 420px;
+  }
+
+  .letter-panel {
+    padding: 23px;
+  }
+
+  .letter-heading {
+    font-size: 2rem;
+  }
+
+  .letter-content {
+    font-size: 0.97rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+  <header class="hero">
+    <div class="eyebrow">A little surprise, made with love, for my love.</div>
+
+    <h1>Happy Birthday,<br>My Love ♡</h1>
+
+    <p>
+      Today is not just another day.<br>
+      Today, We celebrates someone
+      who makes my world more beautiful. ✨
+    </p>
+  </header>
+
+  <section class="layout">
+
+    <!-- Birthday cake -->
+    <div class="cake-panel">
+
+      <h2 class="cake-title">Make a birthday wish 🎂</h2>
+      <p class="cake-subtitle">This little cake is just for you.</p>
+<p class="cake-subtitle">Click the candle to blow it.</p>
+      <div class="cake-scene">
+
+        <div class="cake-plate"></div>
+
+        <div class="cake">
+          <div class="cake-decoration">
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+          </div>
+        </div>
+
+        <div class="cake-top">
+          <div class="frosting"></div>
+          <div class="drip one"></div>
+          <div class="drip two"></div>
+          <div class="drip three"></div>
+          <div class="drip four"></div>
+        </div>
+
+        <button
+          class="candle"
+          id="candle"
+          aria-label="Blow out the birthday candle"
+          title="Click to blow out the candle"
+          onclick="blowOutCandle()"
+        >
+          <span class="flame" id="flame"></span>
+          <span class="smoke" id="smoke"></span>
+        </button>
+
+      </div>
+
+      <p class="cake-instruction" id="candleMessage">
+        Make a wish, then tap the candle ✨
+      </p>
+
+      <button
+        class="surprise-button"
+        id="surpriseButton"
+        onclick="openSurprise()"
+      >
+        Open Your Surprise 💌
+      </button>
+
+    </div>
+
+    <!-- Birthday letter -->
+    <article class="letter-panel">
+
+      <h2 class="letter-heading">To My Favorite Person ♡</h2>
+
+      <div class="letter-content">
+
+        <p>
+          Happy Birthday, my love! 🎂💕
+        </p>
+
+        <p>
+          yedi ma timlai kei dina sakxu bhane,
+          I would give you the ability to see yourself
+          through my eyes. Then you would understand
+          how special you are to me and how much
+          happiness you bring into my life.
+        </p>
+
+        <p>
+          Today, I wish you endless happiness, success,
+          beautiful memories, and every little thing
+          your heart dreams of. You deserve so much
+          more than words could ever explain.
+        </p>
+
+        <div id="hiddenLetter" class="hidden-letter">
+
+          <p>
+            But there is something I want you to know.
+            I don't want to be with you only on your
+            birthday. I want to celebrate your ordinary
+            days, your achievements, your little victories,
+            and all the beautiful moments life has waiting
+            for us.
+          </p>
+
+          <p>
+            I want to grow with you, support you when
+            life gets difficult, laugh with you over silly
+            things, and make more memories together.
+            I want to celebrate your birthdays year after
+            year, watching our story grow more beautiful
+            with time.
+          </p>
+
+          <p>
+            I cannot promise that every day will be
+            perfect, but I can promise to keep choosing
+            you, to respect you, to listen to you, and to
+            do my best to make you feel loved.
+          </p>
+
+          <p>
+            This birthday is one beautiful chapter.
+            I hope we get to write many more chapters
+            together, sharing new dreams, overcoming
+            challenges, and making beautiful memories
+            for as long as life allows us.
+          </p>
+
+          <p>
+            I don't just wish to be part of your birthday
+            today. I hope to be there for your birthdays
+            in the years to come, celebrating every new
+            chapter of your life by your side.
+          </p>
+
+          <p>
+            You are someone I love deeply, someone
+            whose happiness matters to me, and someone
+            I hope to share countless beautiful tomorrows
+            with. ❤️
+          </p>
+
+          <div class="signature">
+            I love you, today and always. 💗
+            <br>
+            Happy Birthday, my forever favorite Mahii💗! 🌹
+          </div>
+
+        </div>
+      </div>
+
+    </article>
+
+  </section>
+
+  <footer>
+    Made with love, just for Miss Mahima. ❤️
+    <br>
+    One birthday, a thousand wishes, and so many
+    beautiful tomorrows to dream about.
+  </footer>
+
+</main>
+
+<script>
+let candleBlownOut = false;
+let surpriseOpened = false;
+
+function blowOutCandle() {
+  if (candleBlownOut) return;
+
+  candleBlownOut = true;
+
+  document.getElementById("flame").classList.add("out");
+  document.getElementById("smoke").classList.add("show");
+
+  document.getElementById("candleMessage").textContent =
+    "Your wish is on its way! May your dreams come true. 💖";
+
+  releaseHearts(18);
+}
+
+function openSurprise() {
+  const letter = document.getElementById("hiddenLetter");
+
+  if (surpriseOpened) {
+    letter.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+    return;
+  }
+
+  surpriseOpened = true;
+  letter.classList.add("visible");
+
+  document.getElementById("surpriseButton").textContent =
+    "Sending you a thousand hearts ❤️";
+
+  document.getElementById("surpriseButton").disabled = true;
+  document.getElementById("surpriseButton").style.opacity = "0.85";
+
+  releaseHearts(35);
+
+  setTimeout(() => {
+    letter.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest"
+    });
+  }, 150);
+}
+
+function releaseHearts(amount) {
+  const symbols = ["❤️", "💕", "💖", "💗", "✨"];
+
+  for (let i = 0; i < amount; i++) {
+    setTimeout(() => {
+      const heart = document.createElement("div");
+
+      heart.className = "floating-heart";
+      heart.textContent =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (15 + Math.random() * 20) + "px";
+      heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+      document.body.appendChild(heart);
+
+      heart.addEventListener("animationend", () => heart.remove(), {
+        once: true
+      });
+    }, i * 100);
+  }
+}
+</script>
+
+</body>
+</html>
